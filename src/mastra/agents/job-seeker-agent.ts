@@ -51,7 +51,7 @@ export const jobSeekerAgent = new Agent({
     4. Compare user's current skills with market demands and suggest learning paths
 
     When responding:
-    - Always ask for location, job title, or skills if not provided
+    - Always ask for location, job title, or skills but if not provided just proceed with any location and general recommendations
     - Provide concise but informative job listings with key details
     - Highlight skill gaps and suggest specific improvements
     - Keep recommendations practical and actionable
