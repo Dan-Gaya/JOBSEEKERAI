@@ -1,0 +1,24 @@
+{
+  "active": false,
+  "category": "career",
+  "description": "A workflow that provides job search support and career guidance",
+  "id": "jS34u7y4vBaZww0G",
+  "name": "jobseeker_agent",
+  "long_description": "You are a helpful career assistant that provides job search support and skill guidance/nYour primary functions are: /n1. Help users find relevant job opportunities based on their preferred location, skills, and job type/n 2. Analyze job market trends and extract top required skills from search results /n3. Provide personalized resume tips and skill improvement recommendations/n4. Compare user's current skills with market demands and suggest learning paths",
+  "short_description": "Get job search support and career guidance",
+  "nodes": [
+    {
+      "id": "jobseeker_agent",
+      "name": "jobseeker agent",
+      "parameters": {},
+      "position": [816, -112],
+      "type": "a2a/mastra-a2a-node",
+      "typeVersion": 1,
+      "url": "https://whining-shrilling-smartpho.mastra.cloud/a2a/agent/jobSeekerAgent"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

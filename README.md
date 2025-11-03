@@ -1,0 +1,196 @@
+# JobSeekerAI 🤖💼
+
+**An Intelligent Career Assistant Built with Mastra A2A Protocol & Telex Integration**
+
+[![Mastra](https://img.shields.io/badge/Built%20with-Mastra-blue)](https://mastra.ai)
+[![A2A Protocol](https://img.shields.io/badge/A2A%20Protocol-Compliant-green)](https://a2a-protocol.org)
+[![Telex](https://img.shields.io/badge/Telex-Integrated-orange)](https://telex.im)
+[![HNG Internship](https://img.shields.io/badge/HNG-Internship-red)](https://hng.tech/internship)
+
+## 🌟 Overview
+
+JobSeekerAI is an intelligent career assistant that helps job seekers discover opportunities and receive personalized guidance. Built as part of the HNG Internship, it combines real-time job market data with AI-powered analysis to provide actionable career insights.
+
+## ✨ Features
+
+- 🔍 **Real-time Job Search** - Fetches live job listings using JSearch API
+- 📊 **Skill Gap Analysis** - Compares your skills with market demands
+- 💡 **Personalized Recommendations** - Suggests skills to learn and resume improvements
+- 🎯 **Career Guidance** - Provides actionable career advice based on market trends
+- 🤖 **AI-Powered** - Uses Google Gemini for intelligent analysis
+- 🔄 **Telex Integration** - Seamlessly integrates with Telex workflows via A2A protocol
+
+## 🛠️ Tech Stack
+
+- **Framework**: Mastra
+- **AI Model**: Google Gemini 2.0 Flash
+- **Protocol**: A2A (Agent-to-Agent)
+- **APIs**: JSearch (Job listings), RapidAPI
+- **Integration**: Telex workflows
+- **Deployment**: Mastra Cloud
+- **Language**: TypeScript
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- Mastra Cloud account
+- JSearch API key (from RapidAPI)
+- Google Gemini API key
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/your-username/jobseeker-ai.git
+cd jobseeker-ai
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Configure environment variables**
+```env
+# .env
+JSEARCH_API_KEY=your_rapidapi_key_here
+GOOGLE_API_KEY=your_gemini_api_key_here
+```
+
+4. **Run locally**
+```bash
+npm run dev
+```
+
+### Deployment
+
+1. **Build the project**
+```bash
+npm run build
+```
+
+2. **Deploy to Mastra Cloud**
+```bash
+npx mastra deploy
+```
+
+## 📁 Project Structure
+
+```
+jobseeker-ai/
+├── src/
+│   ├── agents/
+│   │   └── jobseeker-agent.ts
+│   ├── tools/
+│   │   ├── job-search-tool.ts
+│   │   └── skill-analysis-tool.ts
+│   ├── routes/
+│   │   └── a2a-agent-route.ts
+│   └── config/
+│       └── mastra-config.ts
+├── package.json
+├── tsconfig.json
+└── .env
+```
+
+## 🔗 API Integration
+
+### A2A Endpoint
+```
+POST https://your-app.mastra.cloud/a2a/agent/jobSeekerAgent
+```
+
+### Example Request
+```json
+{
+  "jsonrpc": "2.0",
+  "id": "test-001",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "role": "user",
+      "parts": [{
+        "kind": "text",
+        "text": "Find AI engineer jobs in Europe"
+      }]
+    }
+  }
+}
+```
+
+## 🎯 Telex Integration
+
+Add this workflow to your Telex instance:
+
+```json
+{
+  "name": "jobseeker_agent",
+  "description": "Get job search support and career guidance",
+  "nodes": [{
+    "id": "jobseeker_agent",
+    "name": "jobseeker agent",
+    "type": "a2a/mastra-a2a-node",
+    "url": "https://your-app.mastra.cloud/a2a/agent/jobSeekerAgent"
+  }]
+}
+```
+
+## 💡 Usage Examples
+
+**Job Search:**
+```
+"Find machine learning jobs in Berlin"
+```
+
+**Skill Analysis:**
+```
+"Analyze my skills: Python, React, AWS"
+```
+
+**Career Advice:**
+```
+"What skills should I learn for data science?"
+```
+
+## 🎓 HNG Internship
+
+This project was built as part of the **HNG Internship** program, demonstrating:
+- ✅ Mastra A2A protocol implementation
+- ✅ Telex workflow integration  
+- ✅ Real-world API integration
+- ✅ Production deployment skills
+- ✅ AI agent development
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [HNG Internship](https://hng.tech/internship) for the opportunity
+- [Mastra](https://mastra.ai) for the excellent framework
+- [Telex](https://telex.im) for workflow integration
+- [JSearch API](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch) for job data
+
+## 📞 Support
+
+For support or questions:
+- Open an issue on GitHub
+- Reach out via [HNG Internship Slack](https://hng-tech.slack.com)
+
+---
+
+**Built with ❤️ for the HNG Internship Community**
+
+*Help job seekers find their dream careers! 🚀*
