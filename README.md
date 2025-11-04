@@ -154,6 +154,119 @@ Add this workflow to your Telex instance:
 ```
 "What skills should I learn for data science?"
 ```
+## Testing with postman 
+
+### Request body
+
+```
+json
+
+{
+  "jsonrpc":"2.0",
+  "id":"exec-001",
+  "method":"message/send",
+  "params":{
+    "messages":[
+      {
+        "kind":"message",
+        "taskId":"task-001",
+        "messageId":"msg-001",
+        "role":"user",
+        "parts":[ { "kind":"text", "text": { "message":"I am skillful machine learning engineer with skills in deep learning,NLP,CV,python ,MERN looking for job in any european country remotely" } } ]
+      }
+    ],
+    "contextId":"ctx-001",
+    "taskId":"task-001"
+  }
+}
+```
+## sample response
+```
+{
+  "jsonrpc": "2.0",
+  "id": "17007e60df1d42efa34d97fef20c5427",
+  "result": {
+    "id": "a92a07cf-39ed-4a1f-82d4-ffa33a5cff56",
+    "contextId": "a79d7fd4-b31f-45a9-9eaa-f54d2645a932",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-11-04T09:50:59.060Z",
+      "message": {
+        "messageId": "c906de8f-11e0-4778-8070-e88d5a3479f6",
+        "role": "agent",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I am here and ready to help! I apologize for the delay.\n\nI will search for remote machine learning engineer positions in Europe. To start, could you list a few specific countries you'd prefer, or should I search across all of Europe? Also, are you interested in full-time, part-time, or contract positions?\n"
+          }
+        ],
+        "kind": "message"
+      }
+    },
+    "artifacts": [
+      {
+        "artifactId": "4bdac2ab-8bf8-4ec7-8473-1baf2b5eea46",
+        "name": "jobSeekerAgentResponse",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I am here and ready to help! I apologize for the delay.\n\nI will search for remote machine learning engineer positions in Europe. To start, could you list a few specific countries you'd prefer, or should I search across all of Europe? Also, are you interested in full-time, part-time, or contract positions?\n"
+          }
+        ]
+      }
+    ],
+    "history": [
+      {
+        "kind": "message",
+        "role": "user",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I am skillful machine learning engineer with skills in deep learning, NLP, CV, python, MERN looking for job in any european country remotely."
+          },
+          {
+            "kind": "data",
+            "data": [
+              {
+                "kind": "text",
+                "text": "<p>I am skillful machine learning engineer with skills in deep learning,NLP,CV,python ,MERN looking for job in any european country remotely</p><p></p>"
+              },
+              {
+                "kind": "text",
+                "text": "I'll help you find remote job opportunities for machine learning engineers in Europe!"
+              },
+              {
+                "kind": "text",
+                "text": "<p>why not responding</p><p></p>"
+              },
+              {
+                "kind": "text",
+                "text": "why not responding"
+              }
+            ]
+          }
+        ],
+        "messageId": "03ce4c78d5ed4a6dbd4e566391ee587c",
+        "taskId": "02d6dae3-73ba-4a17-b703-ca745d4a24b9"
+      },
+      {
+        "kind": "message",
+        "role": "agent",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "I am here and ready to help! I apologize for the delay.\n\nI will search for remote machine learning engineer positions in Europe. To start, could you list a few specific countries you'd prefer, or should I search across all of Europe? Also, are you interested in full-time, part-time, or contract positions?\n"
+          }
+        ],
+        "messageId": "288d39a4-cedf-428e-9e84-022ad2a76da9",
+        "taskId": "ff47747f-d694-4719-a897-0dad1dfc2090"
+      }
+    ],
+    "kind": "task"
+  }
+}
+```
+
 
 ## 🎓 HNG Internship
 
